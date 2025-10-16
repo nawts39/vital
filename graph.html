@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>グラフ - バイタルまるみえくん</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+</head>
+<body>
+    <header>バイタルまるみえくん</header>
+    <p class="update-info">毎日23:50自動更新</p>
+
+    <div class="nav-container">
+        <a href="index.html" class="nav-button">ダッシュボード</a>
+        <button class="nav-button active">グラフ</button>
+    </div>
+
+    <div class="nav-container chart-controls">
+        <button id="btn-glucose" class="nav-button active">血糖値</button>
+        <button id="btn-weight" class="nav-button">体重</button>
+        <button id="btn-bp" class="nav-button">血圧</button>
+    </div>
+    
+    <div class="chart-container">
+        <canvas id="vitalsChart"></canvas>
+    </div>
+    
+    <div id="loading">グラフを読み込み中...</div>
+    <div id="error" style="display: none; color: red;"></div>
+
+    <script src="graph.js"></script>
+</body>
+</html>
